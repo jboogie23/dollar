@@ -1,3 +1,7 @@
+Dollar Holler Tutorial from Everything Svelte course
+
+---
+
 # Process to instal Svelte, TailwindCSS, and prettier-plugin-svelte (for auto ordering of classes)
 
 ## Svelte
