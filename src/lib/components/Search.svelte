@@ -10,8 +10,8 @@
 		type="text"
 		name="search"
 		placeholder="Search by keyword"
-		class="w-72 border-b-2 border-dashed border-b-pastelPurple bg-transparent font-sansSerif text-xl text-black outline-none focus:border-solid focus:border-b-lavenderIndigo"
+		class="w-full border-b-2 border-dashed border-b-pastelPurple bg-transparent font-sansSerif text-base text-black outline-none focus:border-solid focus:border-b-lavenderIndigo md:w-[14rem] lg:w-72 lg:text-xl"
 		autocomplete="off"
 	/>
-	<button class="font-sansSerif text-xl font-black text-pastelPurple">Search</button>
+	<button class="font-sansSerif text-lg font-black text-pastelPurple lg:text-xl">Search</button>
 </div>
