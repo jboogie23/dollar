@@ -5,11 +5,15 @@
 	import ThreeDots from '$lib/components/Icon/ThreeDots.svelte';
 	import View from '$lib/components/Icon/View.svelte';
 	import Search from '$lib/components/Search.svelte';
-	import InvoiceRow from './invoiceRow.svelte';
+	import InvoiceRow from './InvoiceRow.svelte';
 	import { centsToDollars, sumInvoices } from '$lib/utils/moneyHelpers';
 	import BlankState from './BlankState.svelte';
 	import InvoiceRowHeader from './InvoiceRowHeader.svelte';
 	import Button from '$lib/components/Button.svelte';
+	import SlidePanel from '$lib/components/SlidePanel.svelte';
+	import InvoiceForm from './InvoiceForm.svelte';
+
+	let isInvoiceFormShowing: boolean = true;
 
 	onMount(() => {
 		loadInvoices();
@@ -32,7 +36,12 @@
 	{/if}
 	<!-- new invoice button -->
 	<div>
-		<Button label="+ Invoice" onClick={() => {}} />
+		<Button
+			label="+ Invoice"
+			onClick={() => {
+				isInvoiceFormShowing = true;
+			}}
+		/>
 	</div>
 </div>
 
@@ -54,8 +63,13 @@
 	{/if}
 </div>
 
-<style lang="postcss">
-	.table-header h3 {
-		@apply text-xl font-black leading-snug;
-	}
-</style>
+<!-- slide panel -->
+{#if isInvoiceFormShowing}
+	<SlidePanel
+		on:closePanel={() => {
+			isInvoiceFormShowing = false;
+		}}
+	>
+		<InvoiceForm />
+	</SlidePanel>
+{/if}
