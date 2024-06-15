@@ -6,12 +6,12 @@
 
 	const blankLineItem = {
 		id: uuidv4(),
-		description: 'Pallet jack',
-		quantity: 1,
-		amount: 22
+		description: '',
+		quantity: 0,
+		amount: 0
 	};
 
-	let lineItems: LineItem[] = [blankLineItem];
+	let lineItems: LineItem[] = [{ ...blankLineItem }];
 
 	const AddLineItem = () => {
 		lineItems = [...lineItems, { ...blankLineItem, id: uuidv4() }];
