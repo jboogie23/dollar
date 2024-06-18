@@ -152,5 +152,34 @@
 			],
 			"subject": "Website"
 		}
+	],
+	"clients": [
+		{
+			"address": "33 Street",
+			"city": "Drummoyne",
+			"email": "rossie@example.com",
+			"id": "1",
+			"name": "Bro Town",
+			"state": "NSW",
+			"zip": "2047"
+		},
+		{
+			"address": "312 Koola",
+			"city": "Killara",
+			"email": "numerike@example.com",
+			"id": "2",
+			"name": "Homies",
+			"state": "NSW",
+			"zip": "2071"
+		},
+		{
+			"address": "6 Yara",
+			"city": "Rozelle",
+			"email": "sninoo@example.com",
+			"id": "3",
+			"name": "Yalla",
+			"state": "NSW",
+			"zip": "2020"
+		}
 	]
 }
